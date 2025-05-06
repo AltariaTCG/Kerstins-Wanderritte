@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kerstins Wanderritte</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        header {
+            background-color: #4CAF50;
+            color: white;
+            text-align: center;
+            padding: 1em;
+        }
+        .gallery {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            padding: 20px;
+        }
+        .gallery img {
+            margin: 10px;
+            width: 300px;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Kerstins Wanderritte</h1>
+    <p>Erlebe die schönsten Momente meiner Wanderungen</p>
+</header>
+
+<div class="gallery">
+    <!-- Hier werden die Bilder angezeigt -->
+</div>
+
+<script>
+    // Funktion zum Laden der Bilder aus dem "Bilder"-Ordner
+    function loadImages() {
+        const gallery = document.querySelector('.gallery');
+        const imageFolder = 'Bilder/';
+
+        // Beispielhafte Bilddateien (ersetze diese mit deinen tatsächlichen Dateinamen)
+        const images = [
+            'bild1.jpg',
+            'bild2.jpg',
+            'bild3.jpg'
+        ];
+
+        images.forEach(image => {
+            const imgElement = document.createElement('img');
+            imgElement.src = imageFolder + image;
+            imgElement.alt = 'Wanderritt Bild';
+            gallery.appendChild(imgElement);
+        });
+    }
+
+    loadImages();
+</script>
+
+</body>
+</html>
